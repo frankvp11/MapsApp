@@ -15,8 +15,8 @@ BoxLayout:
     #:import MapSource kivy_garden.mapview.MapSource
     MapView:
         
-        lat:  43.266660
-        lon:  -79.918103
+        lat:  0
+        lon:  0
         zoom: 13
         MapMarkerPopup:
             lat: app.lat
