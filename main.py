@@ -7,6 +7,11 @@ from kivy.utils import platform
 from math import radians, sin, asin, cos, sqrt
 from kivy_garden.mapview import MapView
 
+        # MapMarkerPopup:
+        #     lat: app.lat
+        #     lon: app.lon
+        #     popup_size: dp(230), dp(130)
+
 kv = '''
 
 BoxLayout:
@@ -15,13 +20,12 @@ BoxLayout:
     #:import MapSource kivy_garden.mapview.MapSource
     MapView:
         
-        lat:  0
-        lon:  0
+        lat:  app.lat
+        lon:  app.lon
         zoom: 13
-        MapMarkerPopup:
-            lat: app.lat
-            lon: app.lon
-            popup_size: dp(230), dp(130)
+        center_on: (app.lat, app.lon)
+
+
 
 
     Label:
